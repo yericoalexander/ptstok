@@ -1,0 +1,420 @@
+<!DOCTYPE html> <!-- Deklarasi tipe dokumen untuk dokumen HTML5 -->
+<html lang="en"> <!-- Elemen root HTML dengan atribut bahasa Inggris -->
+
+<head> <!-- Mulai bagian kepala dokumen -->
+    <meta charset="UTF-8"> <!-- Pengaturan karakter set dokumen ke UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Pengaturan mode kompatibilitas untuk IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Pengaturan tampilan responsif untuk perangkat seluler -->
+
+    <title>Portofolio Web</title> <!-- Penetapan judul halaman web -->
+
+    <!-- Menghubungkan stylesheet eksternal "boxicons" untuk ikon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Menghubungkan stylesheet eksternal "style.css" untuk tampilan dan gaya -->
+    <link rel="stylesheet" href="style.css">
+</head> <!-- Akhir bagian kepala dokumen -->
+
+<body>
+
+    <!-- Header desain halaman web -->
+    <header class="header">
+        <!-- Tautan untuk logo dengan teks "Fahmi." dan elemen animasi -->
+        <a href="#" class="logo">Fahmi.<span class="animate" style="--i:1"></span></a>
+
+        <!-- Tombol menu dengan ikon, tombol ini digunakan untuk tampilan seluler -->
+        <div class="bx bx-menu" id="menu-icon"><span class="animate" style="--i:2"></span></div>
+
+        <!-- Navigasi utama halaman web dalam elemen <nav> -->
+        <nav class="navbar">
+            <!-- Tautan menu yang aktif ditandai dengan kelas "active" -->
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+
+            <!-- Elemen yang menunjukkan navigasi aktif -->
+            <span class="active-nav"></span>
+
+            <!-- Elemen animasi di dalam navigasi -->
+            <span class="animate" style="--i:2"></span>
+        </nav>
+    </header>
+
+    <!--home section design-->
+    <section class="home show-animate" id="home">
+        <!-- Ini adalah bagian header dari halaman beranda (home) -->
+
+        <div class="home-content">
+            <!-- Ini adalah konten utama pada beranda -->
+            <h1>Hi, I'm <span>Fahmi Ihfa Khairiyah</span><span class="animate" style="--i:2"></span></h1>
+            <!-- Ini adalah judul utama yang berisi nama -->
+            <div class="text-animate">
+                <h3>Student In Stematel</h3>
+                <!-- Ini adalah subjudul yang mendeskripsikan status sebagai mahasiswa -->
+                <span class="animate" style="--i:3"></span>
+            </div>
+            <p>I am a student from SMK Telkom Purwokerto, My class is XI PPLG 4. I am entering SMK Telkom in 2022.</p>
+            <!-- Ini adalah paragraf yang berisi deskripsi diri -->
+            <span class="animate" style="--i:4"></span>
+        </div>
+
+        <div class="btn-box">
+            <!-- Ini adalah kotak tombol aksi -->
+            <a href="#" class="btn">Hire Me</a>
+            <!-- Tombol untuk mengarahkan ke tindakan 'Hire Me' -->
+            <a href="#" class="btn">Let's Talk</a>
+            <!-- Tombol untuk mengarahkan ke tindakan 'Let's Talk' -->
+            <span class="animate" style="--i:5"></span>
+        </div>
+
+        <div class="home-sci">
+            <!-- Ini adalah bagian media sosial -->
+            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            <!-- Ikon WhatsApp -->
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <!-- Ikon Instagram -->
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <!-- Ikon Twitter -->
+            <span class="animate" style="--i:6"></span>
+        </div>
+
+        <div class="home-imgHover"></div>
+        <!-- Ini adalah latar belakang untuk efek hover -->
+        <span class="animate home-img" style="--i:7"></span>
+    </section>
+
+
+    <!-- about section design -->
+    <section class="about" id="about">
+        <!-- Ini adalah bagian dari halaman "About Me" -->
+
+        <h2 class="heading">About <span>Me</span><span class="animate scroll" style="--i:1"></span></h2>
+        <!-- Judul "About Me" -->
+
+        <div class="about-img">
+            <!-- Ini adalah gambar Anda dan elemen terkait -->
+            <img src="/image/yt (4).png" alt="img-spin">
+            <!-- Gambar dengan efek putaran -->
+            <span class="circle-spin"></span>
+            <!-- Efek lingkaran berputar -->
+            <span class="animate scroll" style="--i:2"></span>
+            <!-- Animasi scroll -->
+        </div>
+
+        <div class="about-content">
+            <!-- Ini adalah konten tentang diri Anda -->
+            <h3>I am Fahmi Ihfa Khairiyah and im a student <span class="animate scroll" style="--i:3"></span></h3>
+            <!-- Judul yang menjelaskan identitas Anda -->
+            <p>
+                <!-- Paragraf yang berisi deskripsi diri Anda -->
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, id quos eveniet quod tenetur ab
+                consectetur inventore sequi aperiam blanditiis facere distinctio illum quam ullam aliquam illo labore
+                dicta eius possimus adipisci! Magni temporibus ab facere facilis aliquam eos fugiat eius aut accusantium
+                alias, optio architecto?
+                <span class="animate scroll" style="--i:4"></span>
+            </p>
+
+            <div class="btn-box btns">
+                <!-- Ini adalah kotak tombol aksi -->
+                <a href="#" class="btn">Read More</a>
+                <!-- Tombol "Read More" yang mengarahkan ke informasi lebih lanjut -->
+                <span class="animate scroll" style="--i:5"></span>
+                <!-- Animasi scroll -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Education section design -->
+    <section class="education" id="education">
+        <!-- Ini adalah bagian dari halaman "Education Journey" -->
+
+        <h2 class="heading">My <span>Journey</span><span class="animate scroll" style="--i:1"></span></h2>
+        <!-- Judul "My Journey" -->
+
+        <div class="education-row">
+            <!-- Ini adalah baris untuk menampilkan kolom pendidikan dan pengalaman -->
+
+            <div class="education-column">
+                <!-- Kolom pertama berisi informasi pendidikan -->
+                <h3 class="title">Education<span class="animate scroll" style="--i:2"></span></h3>
+                <!-- Judul "Education" -->
+
+                <div class="education-box">
+                    <!-- Kotak yang berisi informasi pendidikan -->
+
+                    <div class="education-content">
+                        <!-- Konten pendidikan pertama -->
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2014 - 2019</div>
+                            <!-- Tahun pendidikan -->
+                            <h3>SD Negeri Pekodokan</h3>
+                            <!-- Nama sekolah -->
+                            <p>Pendidikan pertama saya setelah TK adalah SD. Saya masuk ke SD Negeri Pekodokan.</p>
+                            <!-- Deskripsi pendidikan -->
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <!-- Konten pendidikan kedua -->
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2019 - 2022</div>
+                            <!-- Tahun pendidikan -->
+                            <h3>SMP Negeri 1 Wangon</h3>
+                            <!-- Nama sekolah -->
+                            <p>Setelah saya lulus SD, Saya melanjutkan sekolah di SMP Negeri 1 Wangon.</p>
+                            <!-- Deskripsi pendidikan -->
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <!-- Konten pendidikan ketiga -->
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2022 - 2025</div>
+                            <!-- Tahun pendidikan -->
+                            <h3>SMK Telkom Purwokerto</h3>
+                            <!-- Nama sekolah -->
+                            <p>Saya sekarang sedang melanjutkan pendidikan saya di SMK Telkom Sandhy Putra Purwokerto.
+                            </p>
+                            <!-- Deskripsi pendidikan -->
+                        </div>
+                    </div>
+                    <span class="animate scroll" style="--i:3"></span>
+                    <!-- Animasi scroll -->
+                </div>
+            </div>
+
+            <div class="education-column">
+                <!-- Kolom kedua berisi informasi pengalaman -->
+                <h3 class="title">Experience<span class="animate scroll" style="--i:5"></span></h3>
+                <!-- Judul "Experience" -->
+
+                <div class="education-box">
+                    <!-- Kotak yang berisi informasi pengalaman -->
+
+                    <div class="education-content">
+                        <!-- Konten pengalaman pertama -->
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2022-2023</div>
+                            <!-- Tahun pengalaman -->
+                            <h3>HTML</h3>
+                            <!-- Nama pengalaman -->
+                            <p>Saya sudah sedikit berpengalaman menggunkan HTML sejak berada di SMK Telkom.</p>
+                            <!-- Deskripsi pengalaman -->
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <!-- Konten pengalaman kedua -->
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2022-2023</div>
+                            <!-- Tahun pengalaman -->
+                            <h3>CSS</h3>
+                            <!-- Nama pengalaman -->
+                            <p>Saya sudah sedikit berpengalaman menggunakan CSS sejak berada di SMK Telkom.</p>
+                            <!-- Deskripsi pengalaman -->
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <!-- Konten pengalaman ketiga -->
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2022-2023</div>
+                            <!-- Tahun pengalaman -->
+                            <h3>C#</h3>
+                            <!-- Nama pengalaman -->
+                            <p>Saya sudah sedikit berpengalaman menggunakan C# sejak bersekolah di SMK Telkom
+                                Purwokerto.</p>
+                            <!-- Deskripsi pengalaman -->
+                        </div>
+                    </div>
+                    <span class="animate scroll" style="--i:6"></span>
+                    <!-- Animasi scroll -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section untuk menampilkan keterampilan (skills) -->
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span><span class="animate scroll" style="--i:1"></span></h2>
+        <!-- Judul "My Skills" -->
+
+        <div class="skills-row">
+            <!-- Baris untuk menampilkan dua kolom keterampilan -->
+
+            <div class="skills-column">
+                <!-- Kolom pertama berisi keterampilan dalam pemrograman -->
+                <h3 class="title">Coding Skills<span class="animate scroll" style="--i:2"></span></h3>
+                <!-- Judul "Coding Skills" -->
+
+                <div class="skills-box">
+                    <!-- Kotak yang berisi informasi keterampilan -->
+
+                    <div class="skills-content">
+                        <!-- Konten keterampilan pertama (HTML) -->
+                        <div class="progress">
+                            <!-- Bar untuk mengukur tingkat keterampilan -->
+                            <h3>HTML <span>70%</span></h3>
+                            <!-- Nama keterampilan dan tingkat keahlian -->
+                            <div class="bar"><span></span></div>
+                            <!-- Bar yang menunjukkan tingkat keahlian -->
+                        </div>
+
+                        <div class="progress">
+                            <!-- Konten keterampilan kedua (CSS) -->
+                            <h3>CSS <span>55%</span></h3>
+                            <!-- Nama keterampilan dan tingkat keahlian -->
+                            <div class="bar"><span></span></div>
+                            <!-- Bar yang menunjukkan tingkat keahlian -->
+                        </div>
+
+                        <div class="progress">
+                            <!-- Konten keterampilan ketiga (C#) -->
+                            <h3>C# <span>74%</span></h3>
+                            <!-- Nama keterampilan dan tingkat keahlian -->
+                            <div class="bar"><span></span></div>
+                            <!-- Bar yang menunjukkan tingkat keahlian -->
+                        </div>
+                    </div>
+                    <span class="animate scroll" style="--i:3"></span>
+                    <!-- Animasi scroll -->
+                </div>
+            </div>
+
+            <div class="skills-column">
+                <!-- Kolom kedua berisi keterampilan profesional -->
+                <h3 class="title">Professional Skills<span class="animate scroll" style="--i:5"></span></h3>
+                <!-- Judul "Professional Skills" -->
+
+                <div class="skills-box">
+                    <!-- Kotak yang berisi informasi keterampilan -->
+
+                    <div class="skills-content">
+                        <!-- Konten keterampilan pertama (Web Design) -->
+                        <div class="progress">
+                            <!-- Bar untuk mengukur tingkat keterampilan -->
+                            <h3>Web Design <span>40%</span></h3>
+                            <!-- Nama keterampilan dan tingkat keahlian -->
+                            <div class="bar"><span></span></div>
+                            <!-- Bar yang menunjukkan tingkat keahlian -->
+                        </div>
+
+                        <div class="progress">
+                            <!-- Konten keterampilan kedua (Web Development) -->
+                            <h3>Web Development <span>45%</span></h3>
+                            <!-- Nama keterampilan dan tingkat keahlian -->
+                            <div class="bar"><span></span></div>
+                            <!-- Bar yang menunjukkan tingkat keahlian -->
+                        </div>
+
+                        <div class="progress">
+                            <!-- Konten keterampilan ketiga (Desktop App) -->
+                            <h3>Desktop App <span>43%</span></h3>
+                            <!-- Nama keterampilan dan tingkat keahlian -->
+                            <div class="bar"><span></span></div>
+                            <!-- Bar yang menunjukkan tingkat keahlian -->
+                        </div>
+                    </div>
+                    <span class="animate scroll" style="--i:6"></span>
+                    <!-- Animasi scroll -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section untuk menampilkan formulir kontak -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span><span class="animate scroll" style="--i:1"></span></h2>
+        <!-- Judul "Contact Me!" -->
+
+        <form action="#">
+            <!-- Formulir kontak dimulai -->
+            <div class="input-box">
+                <!-- Kotak input pertama -->
+                <div class="input-field">
+                    <!-- Input field untuk nama lengkap -->
+                    <input type="text" placeholder="Full Name" required>
+                    <!-- Input teks untuk nama lengkap -->
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <!-- Input field kedua -->
+                    <input type="text" placeholder="Email Address" required>
+                    <!-- Input teks untuk alamat email -->
+                    <span class="focus"></span>
+                </div>
+                <span class="animate scroll" style="--i:3"></span>
+                <!-- Animasi scroll -->
+            </div>
+
+            <div class="input-box">
+                <!-- Kotak input kedua -->
+                <div class="input-field">
+                    <!-- Input field untuk nomor ponsel -->
+                    <input type="number" placeholder="Mobile Number" required>
+                    <!-- Input angka untuk nomor ponsel -->
+                    <span class="focus"></span>
+                </div>
+
+                <div class="input-field">
+                    <!-- Input field ketiga -->
+                    <input type="text" placeholder="Email Subject" required>
+                    <!-- Input teks untuk subjek email -->
+                    <span class="focus"></span>
+                </div>
+                <span class="animate scroll" style="--i:5"></span>
+                <!-- Animasi scroll -->
+            </div>
+
+            <div class="textarea-field">
+                <!-- Kotak input untuk pesan teks -->
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <!-- Area teks untuk pesan -->
+                <span class="focus"></span>
+                <span class="animate scroll" style="--i:7"></span>
+                <!-- Animasi scroll -->
+            </div>
+
+            <div class="btn-box btns">
+                <!-- Kotak tombol submit -->
+                <button type="submit" class="btn">Submit</button>
+                <!-- Tombol "Submit" -->
+                <span class="animate scroll" style="--i:9"></span>
+                <!-- Animasi scroll -->
+            </div>
+        </form>
+    </section>
+
+
+    <!--footer design-->
+    <footer class="footer">
+        <!-- Menggunakan elemen <footer> untuk membuat bagian footer -->
+
+        <div class="footer-content">
+            <!-- Bagian konten footer -->
+            <div class="footer-text">
+                <!-- Bagian teks di dalam footer -->
+                <p>Copyright &copy; 2023 by Fahmi Ihfa Khairiyah | All Rights Reserved.</p>
+                <!-- Teks hak cipta dan nama penulis dengan simbol hak cipta &copy; -->
+            </div>
+
+            <div class="footer-iconTop">
+                <!-- Bagian ikon di footer -->
+                <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+                <!-- Ikon panah atas yang merupakan tautan ke atas halaman -->
+            </div>
+        </div>
+    </footer>
+    <!-- Penutup elemen footer -->
+
+    <script src="script.js"></script>
+    <!-- Menambahkan script JavaScript yang terhubung dengan file "script.js" -->
+</body>
+<!-- Penutup elemen <body> -->
+
+</html>
+<!-- Penutup elemen <html> -->

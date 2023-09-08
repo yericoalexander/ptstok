@@ -1,0 +1,1348 @@
+/* Import font Poppins dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset gaya default untuk semua elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', 'sans-serif';
+    /* Menggunakan font Poppins sebagai font default */
+}
+
+/* Variabel warna yang dapat digunakan di seluruh halaman */
+:root {
+    --bg-color: #1f242d;
+    /* Warna latar belakang utama */
+    --second-bg-color: #323946;
+    /* Warna latar belakang sekunder */
+    --text-color: #fff;
+    /* Warna teks */
+    --main-color: #0ef;
+    /* Warna utama seperti warna tombol */
+}
+
+/* Pengaturan dasar untuk elemen HTML */
+html {
+    font-size: 62.5%;
+    /* Ukuran font dasar diatur ke 62.5% dari ukuran font standar */
+    overflow-x: hidden;
+    /* Menghindari scrolling horizontal pada halaman */
+}
+
+/* Gaya dasar untuk elemen body */
+body {
+    background: var(--bg-color);
+    /* Menggunakan warna latar belakang utama */
+    color: var(--text-color);
+    /* Menggunakan warna teks */
+}
+
+/* Gaya dasar untuk elemen header */
+.header {
+    position: fixed;
+    /* Header tetap berada di atas, bahkan saat scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    /* Padding di sekitar header */
+    background: transparent;
+    /* Latar belakang header transparan */
+    display: flex;
+    /* Menggunakan flexbox untuk tata letak header */
+    justify-content: space-between;
+    /* Membuat ruang di antara elemen header */
+    align-items: center;
+    /* Posisikan elemen ke tengah secara vertikal */
+    z-index: 100;
+    /* Mengatur tumpukan elemen header di atas */
+    transition: .3s;
+    /* Animasi perubahan saat header berubah */
+}
+
+/* Gaya header saat di-scroll (mode lengket) */
+.header.sticky {
+    background: var(--bg-color);
+    /* Latar belakang diubah saat mode lengket */
+}
+
+/* Gaya untuk elemen logo */
+.logo {
+    position: relative;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    /* Warna teks sesuai dengan variabel yang telah ditentukan */
+    font-weight: 600;
+    /* Ketebalan teks */
+}
+
+/* Gaya untuk elemen navbar */
+.navbar {
+    position: relative;
+}
+
+/* Gaya untuk tautan di dalam navbar */
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    /* Warna teks sesuai dengan variabel yang telah ditentukan */
+    font-weight: 500;
+    /* Ketebalan teks */
+    margin-left: 3.5rem;
+    /* Ruang antara tautan navbar */
+    transition: .3s;
+    /* Animasi perubahan saat tautan dihover */
+}
+
+/* Gaya saat tautan dihover atau aktif */
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    /* Warna saat dihover atau aktif sesuai dengan variabel yang telah ditentukan */
+}
+
+/* Gaya untuk elemen menu icon */
+#menu-icon {
+    position: relative;
+    font-size: 3.6rem;
+    color: var(--text-color);
+    /* Warna teks sesuai dengan variabel yang telah ditentukan */
+    cursor: pointer;
+    /* Mengubah kursor menjadi tanda tangan saat dihover */
+    display: none;
+    /* Tidak ditampilkan secara default */
+}
+
+/* Gaya untuk elemen section */
+section {
+    min-height: 100vh;
+    /* Set tinggi minimum section menjadi tinggi layar penuh */
+    padding: 10rem 9% 2rem;
+    /* Padding di sekitar section */
+}
+
+/* Gaya untuk elemen .home */
+.home {
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    background: url('/image/Buy\ 1\ Free\ 1\ \(2\).png');
+    /* Gambar latar belakang */
+    background-size: cover;
+    /* Latar belakang diubah untuk menutupi elemen .home */
+    background-position: center;
+    /* Posisi latar belakang di tengah */
+}
+
+/* Gaya untuk elemen .home-content */
+.home-content {
+    max-width: 60rem;
+    /* Lebar maksimum .home-content */
+    z-index: 99;
+    /* Menempatkan elemen .home-content di atas elemen lainnya */
+}
+
+/* Gaya untuk judul h1 dalam .home-content */
+.home-content h1 {
+    position: relative;
+    display: inline-block;
+    font-size: 5.6rem;
+    /* Ukuran font */
+    font-weight: 700;
+    /* Ketebalan font */
+    line-height: 1.3;
+    /* Tinggi baris */
+}
+
+/* Gaya untuk span dalam judul h1 */
+.home-content h1 span {
+    color: var(--text-color);
+    /* Warna teks sesuai dengan variabel yang telah ditentukan */
+}
+
+/* Gaya untuk elemen .text-animate dalam .home-content */
+.home-content .text-animate {
+    position: relative;
+    width: 32.8rem;
+    /* Lebar elemen .text-animate */
+}
+
+/* Gaya untuk judul h3 dalam .text-animate */
+.home-content .text-animate h3 {
+    font-size: 3.2rem;
+    /* Ukuran font */
+    font-weight: 700;
+    /* Ketebalan font */
+    color: transparent;
+    /* Teks menjadi transparan */
+    -webkit-text-stroke: .7px var(--main-color);
+    /* Membuat garis teks dengan warna utama */
+    background-image: linear-gradient(var(--main-color), var(--main-color));
+    /* Latar belakang gradient */
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    /* Klipkan latar belakang ke teks */
+    background-position: -33rem 0;
+    /* Posisi latar belakang awal */
+}
+
+/* Gaya untuk judul h3 saat elemen .home memiliki kelas .show-animate */
+.home.show-animate .home-content .text-animate h3 {
+    animation: homeBgText 6s linear infinite;
+    /* Animasi latar belakang teks */
+    animation-delay: 2s;
+    /* Delay animasi */
+}
+
+/* Gaya untuk efek kursor di judul h3 */
+.home-content .text-animate h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid var(--main-color);
+    /* Garis bergerak di sebelah kiri teks */
+    z-index: -1;
+}
+
+/* Gaya untuk efek kursor saat elemen .home memiliki kelas .show-animate */
+.home.show-animate .home-content .text-animate h3::before {
+    animation: homeCursorText 6s linear infinite;
+    /* Animasi efek kursor */
+    animation-delay: 2s;
+    /* Delay animasi */
+}
+
+/* Gaya untuk paragraf dalam .home-content */
+.home-content p {
+    position: relative;
+    font-size: 1.6rem;
+    /* Ukuran font */
+    margin: 2rem 0 4rem;
+    /* Margin atas, bawah, dan kiri */
+}
+
+/* Gaya untuk elemen .btn-box */
+.btn-box {
+    position: absolute;
+    display: flex;
+    bottom: 200px;
+    justify-content: space-between;
+    width: 34.5rem;
+    /* Lebar elemen .btn-box */
+    height: 5rem;
+    /* Tinggi elemen .btn-box */
+}
+
+/* Gaya untuk tombol .btn dalam .btn-box */
+.btn-box .btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    /* Lebar tombol */
+    height: 100%;
+    background: var(--main-color);
+    /* Warna latar belakang */
+    border: .2rem solid var(--main-color);
+    /* Garis pinggir tombol */
+    border-radius: .8rem;
+    /* Radius sudut tombol */
+    font-size: 1.8rem;
+    /* Ukuran font */
+    font-weight: 600;
+    /* Ketebalan font */
+    letter-spacing: .1rem;
+    /* Spasi antar huruf */
+    color: var(--bg-color);
+    /* Warna teks */
+    z-index: 1;
+    overflow: hidden;
+    transform: .5s;
+}
+
+/* Gaya tombol saat dihover */
+.btn-box .btn:hover {
+    color: var(--main-color);
+    /* Warna teks saat dihover */
+}
+
+/* Gaya untuk tombol kedua (.btn:nth-child(2)) dalam .btn-box */
+.btn-box .btn:nth-child(2) {
+    background: transparent;
+    /* Latar belakang transparan */
+    color: var(--main-color);
+    /* Warna teks */
+}
+
+/* Gaya tombol kedua saat dihover */
+.btn-box .btn:nth-child(2):hover {
+    color: var(--bg-color);
+    /* Warna teks saat dihover */
+}
+
+/* Efek sebelum tombol pertama (.btn) */
+.btn-box .btn:nth-child(2)::before {
+    background: var(--main-color);
+    /* Warna latar belakang */
+}
+
+/* Efek garis bawah tombol */
+.btn-box .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    /* Warna latar belakang garis bawah */
+    z-index: -1;
+    transition: .5s;
+}
+
+/* Efek garis bawah saat tombol dihover */
+.btn-box .btn:hover::before {
+    width: 100%;
+}
+
+/* Gaya untuk elemen .home-sci */
+.home-sci {
+    position: absolute;
+    bottom: 4rem;
+    width: 170px;
+    /* Lebar elemen .home-sci */
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Gaya untuk tautan a dalam .home-sci */
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    /* Lebar tautan a */
+    height: 40px;
+    /* Tinggi tautan a */
+    background: transparent;
+    /* Latar belakang transparan */
+    border: .2rem solid var(--main-color);
+    /* Garis pinggir tautan a */
+    border-radius: 50%;
+    /* Radius sudut tautan a */
+    font-size: 20px;
+    /* Ukuran font */
+    color: var(--main-color);
+    /* Warna teks */
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+/* Gaya untuk tautan a saat dihover */
+.home-sci a:hover {
+    color: var(--bg-color);
+    /* Warna teks saat dihover */
+}
+
+/* Efek sebelum tautan a (.home-sci a) */
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    /* Warna latar belakang */
+    z-index: -1;
+    transition: .5s;
+}
+
+/* Efek garis bawah saat tautan a dihover */
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+/* Gaya untuk elemen .home-imgHover */
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    /* Lebar elemen .home-imgHover */
+    height: 100%;
+    background: transparent;
+    transition: .3s;
+    /* Efek transisi saat dihover */
+}
+
+/* Gaya elemen .home-imgHover saat dihover */
+.home-imgHover:hover {
+    background: var(--bg-color);
+    /* Latar belakang saat dihover */
+    opacity: .8;
+    /* Opasitas saat dihover */
+}
+
+/* Gaya untuk elemen .about */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    /* Jarak antar elemen dalam .about */
+    background: var(--second-bg-color);
+    /* Warna latar belakang .about */
+    padding-bottom: 6rem;
+    /* Padding bagian bawah .about */
+}
+
+/* Gaya untuk elemen .heading */
+.heading {
+    position: relative;
+    font-size: 5rem;
+    /* Ukuran font */
+    margin-bottom: 3rem;
+    /* Jarak bawah */
+    text-align: center;
+}
+
+/* Gaya untuk elemen <span> */
+span {
+    color: var(--main-color);
+    /* Warna teks */
+}
+
+/* Gaya untuk elemen .about-img */
+.about-img {
+    position: relative;
+    width: 25rem;
+    /* Lebar elemen .about-img */
+    height: 25rem;
+    /* Tinggi elemen .about-img */
+    border-radius: 50%;
+    /* Radius sudut elemen .about-img */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gaya untuk gambar dalam .about-img */
+.about-img img {
+    width: 100%;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+    /* Garis pinggir gambar */
+}
+
+/* Gaya untuk elemen .circle-spin */
+.about-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid var(--second-bg-color);
+    /* Warna pinggir atas */
+    border-bottom: .2rem solid var(--second-bg-color);
+    /* Warna pinggir bawah */
+    border-left: .2rem solid var(--main-color);
+    /* Warna pinggir kiri */
+    border-right: .2rem solid var(--main-color);
+    /* Warna pinggir kanan */
+    animation: aboutSpinner 8s linear infinite;
+    /* Animasi putaran */
+}
+
+/* Gaya untuk elemen .about-content */
+.about-content {
+    text-align: center;
+}
+
+/* Gaya untuk elemen h3 dalam .about-content */
+.about-content h3 {
+    position: relative;
+    display: inline-block;
+    font-size: 2.6rem;
+    /* Ukuran font */
+}
+
+/* Gaya untuk elemen p dalam .about-content */
+.about-content p {
+    position: relative;
+    font-size: 2.6rem;
+    /* Ukuran font */
+    margin: 2rem 0 3rem;
+    /* Jarak atas, kanan, bawah */
+}
+
+/* Gaya untuk elemen .btn-box dengan kelas .btns */
+.btn-box.btns {
+    display: inline-block;
+    width: 15rem;
+    /* Lebar elemen .btn-box dengan kelas .btns */
+}
+
+/* Gaya untuk elemen <a> dalam .btn-box dengan kelas .btns */
+.btn-box.btns a::before {
+    background: var(--second-bg-color);
+    /* Warna latar belakang pseudo-elemen */
+}
+
+/* Gaya untuk elemen .education */
+.education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+    /* Padding bagian bawah .education */
+}
+
+/* Gaya untuk elemen .education-row */
+.education .education-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    /* Jarak antara elemen dalam .education-row */
+}
+
+/* Gaya untuk elemen .education-column */
+.education-row .education-column {
+    flex: 1 1 40rem;
+}
+
+/* Gaya untuk elemen .title dalam .education-column */
+.education-column .title {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    /* Ukuran font */
+    margin: 0 0 1.5rem 2rem;
+    /* Margin (atas, kanan, bawah, kiri) */
+}
+
+/* Gaya untuk elemen .education-box dalam .education-column */
+.education-column .education-box {
+    position: relative;
+    border-left: .2rem solid var(--main-color);
+    /* Garis sebelah kiri */
+}
+
+/* Gaya untuk elemen .education-content dalam .education-box */
+.education-box .education-content {
+    position: relative;
+    padding-left: 2rem;
+    /* Padding sebelah kiri */
+}
+
+/* Gaya untuk pseudo-elemen ::before dalam .education-content */
+.education-box .education-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    /* Lebar pseudo-elemen ::before */
+    height: 2rem;
+    /* Tinggi pseudo-elemen ::before */
+    background: var(--main-color);
+    /* Warna latar belakang pseudo-elemen */
+    border-radius: 50%;
+    /* Radius sudut pseudo-elemen */
+}
+
+/* Gaya untuk elemen .content dalam .education-content */
+.education-content .content {
+    position: relative;
+    padding: 1.5rem;
+    /* Padding elemen .content */
+    border: .2rem solid var(--main-color);
+    /* Garis pinggir */
+    border-radius: .6rem;
+    /* Radius sudut */
+    margin-bottom: 2rem;
+    /* Margin bawah */
+}
+
+/* Gaya untuk pseudo-elemen ::before dalam .content saat hover */
+.education-content .content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    /* Warna latar belakang pseudo-elemen */
+    z-index: -1;
+    /* Indeks z pseudo-elemen */
+    transition: .5s;
+    /* Transisi untuk mengubah lebar pseudo-elemen */
+}
+
+/* Gaya untuk pseudo-elemen ::before dalam .content saat hover */
+.education-content .content:hover::before {
+    width: 100%;
+    /* Mengubah lebar pseudo-elemen saat hover */
+}
+
+/* Gaya untuk elemen .year dalam .content */
+.education-content .content .year {
+    font-size: 1.5rem;
+    /* Ukuran font tahun */
+    color: var(--main-color);
+    /* Warna teks tahun */
+    padding-bottom: .5rem;
+    /* Padding bagian bawah tahun */
+}
+
+/* Gaya untuk elemen <i> dalam .year */
+.education-content .content .year i {
+    padding-right: .5rem;
+    /* Padding kanan ikon dalam tahun */
+}
+
+/* Gaya untuk elemen h3 dalam .content */
+.education-content .content h3 {
+    font-size: 2rem;
+    /* Ukuran font judul */
+}
+
+/* Gaya untuk elemen p dalam .content */
+.education-content .content p {
+    font-size: 1.6rem;
+    /* Ukuran font paragraf */
+    padding-top: .5rem;
+    /* Padding atas paragraf */
+}
+
+/* Gaya untuk elemen .skills */
+.skills {
+    min-height: auto;
+    /* Ketinggian minimum */
+    padding-bottom: 7rem;
+    /* Padding bagian bawah .skills */
+    background: var(--second-bg-color);
+    /* Warna latar belakang .skills */
+}
+
+/* Gaya untuk elemen h2 dalam .skills */
+.skills h2 {
+    display: inline-block;
+    /* Menampilkan sebagai inline-block */
+    left: 50%;
+    /* Posisi horizontal di tengah */
+    transform: translateX(-50%);
+    /* Pusatkan horizontal */
+}
+
+/* Gaya untuk elemen .skills-row */
+.skills .skills-row {
+    display: flex;
+    /* Tampilkan sebagai flexbox */
+    flex-wrap: wrap;
+    /* Wrap elemen flex */
+    gap: 5rem;
+    /* Jarak antara elemen dalam .skills-row */
+}
+
+/* Gaya untuk elemen .skills-column dalam .skills-row */
+.skills-row .skills-column {
+    flex: 1 1 40rem;
+    /* Perilaku flex: fleksibilitas, perbandingan, ukuran minimum */
+}
+
+/* Gaya untuk elemen .title dalam .skills-column */
+.skills-column .title {
+    position: relative;
+    /* Posisi relatif */
+    display: inline-block;
+    /* Menampilkan sebagai inline-block */
+    font-size: 2.5rem;
+    /* Ukuran font judul */
+    margin: 0 0 1.5rem;
+    /* Margin (atas, kanan, bawah) */
+}
+
+/* Gaya untuk elemen .skills-box dalam .skills-column */
+.skills-column .skills-box {
+    position: relative;
+    /* Posisi relatif */
+}
+
+/* Gaya untuk elemen .skills-content */
+.skills-box .skills-content {
+    position: relative;
+    /* Posisi relatif */
+    border: .2rem solid var(--main-color);
+    /* Garis tepi dengan warna dari variabel --main-color */
+    border-radius: .6rem;
+    /* Radius sudut elemen */
+    padding: .5rem 1.5rem;
+    /* Padding (atas/bawah dan kanan/kiri) */
+    z-index: 1;
+    /* Indeks z */
+    overflow: hidden;
+    /* Konten yang melebihi batas elemen tersembunyi */
+}
+
+/* Gaya untuk pseudo-elemen ::before dalam .skills-content */
+.skills-box .skills-content::before {
+    content: '';
+    /* Konten pseudo-elemen */
+    position: absolute;
+    /* Posisi absolut */
+    top: 0;
+    /* Posisi puncak */
+    left: 0;
+    /* Posisi kiri */
+    width: 0;
+    /* Lebar awal pseudo-elemen */
+    height: 100%;
+    /* Tinggi pseudo-elemen */
+    background: var(--bg-color);
+    /* Warna latar belakang dari variabel --bg-color */
+    z-index: -1;
+    /* Indeks z di bawah konten utama */
+    transition: .5s;
+    /* Transisi untuk mengubah lebar pseudo-elemen */
+}
+
+/* Gaya untuk pseudo-elemen ::before dalam .skills-content saat hover */
+.skills-box .skills-content:hover::before {
+    width: 100%;
+    /* Mengubah lebar pseudo-elemen saat hover */
+}
+
+/* Gaya untuk elemen .progress dalam .skills-content */
+.skills-content .progress {
+    padding: 1rem 0;
+    /* Padding (atas/bawah) */
+}
+
+/* Gaya untuk elemen h3 dalam .progress */
+.skills-content .progress h3 {
+    font-size: 1.7rem;
+    /* Ukuran font h3 */
+    display: flex;
+    /* Tampilkan sebagai flexbox */
+    justify-content: space-between;
+    /* Ruang di antara elemen flex */
+}
+
+/* Gaya untuk elemen span dalam h3 */
+.skills-content .progress h3 span {
+    color: var(--text-color);
+    /* Warna teks dari variabel --text-color */
+}
+
+/* Gaya untuk elemen .bar dalam .progress */
+.skills-content .progress .bar {
+    height: 2.5rem;
+    /* Tinggi elemen .bar */
+    border-radius: .6rem;
+    /* Radius sudut elemen .bar */
+    border: .2rem solid var(--main-color);
+    /* Garis tepi dengan warna dari variabel --main-color */
+    padding: .5rem;
+    /* Padding (atas/bawah dan kanan/kiri) */
+    margin: 1rem 0;
+    /* Margin (atas/bawah) */
+}
+
+/* Gaya untuk elemen span dalam .bar */
+.skills-content .progress .bar span {
+    display: block;
+    /* Tampilkan sebagai blok */
+    height: 100%;
+    /* Tinggi elemen span */
+    border-radius: .3rem;
+    /* Radius sudut elemen span */
+    background: var(--main-color);
+    /* Warna latar belakang dari variabel --main-color */
+}
+
+/* Pengaturan lebar elemen span dalam elemen .bar untuk keterampilan di kolom pertama */
+.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
+    width: 70%;
+    /* Lebar elemen span sesuai dengan persentase keterampilan */
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
+    width: 55%;
+    /* Lebar elemen span sesuai dengan persentase keterampilan */
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
+    width: 74%;
+    /* Lebar elemen span sesuai dengan persentase keterampilan */
+}
+
+/* Pengaturan lebar elemen span dalam elemen .bar untuk keterampilan di kolom kedua */
+.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
+    width: 40%;
+    /* Lebar elemen span sesuai dengan persentase keterampilan */
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
+    width: 45%;
+    /* Lebar elemen span sesuai dengan persentase keterampilan */
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
+    width: 43%;
+    /* Lebar elemen span sesuai dengan persentase keterampilan */
+}
+
+/* Gaya untuk bagian kontak */
+.contact {
+    min-height: auto;
+    /* Ketinggian minimum */
+    padding-bottom: 7rem;
+    /* Padding (bawah) */
+}
+
+.contact h2 {
+    display: inline-block;
+    /* Tampilkan sebagai blok */
+    left: 50%;
+    /* Posisi horisontal di tengah */
+    transform: translateX(-50%);
+    /* Geser ke kiri 50% dari lebar elemen */
+}
+
+.contact form {
+    max-width: 70rem;
+    /* Lebar maksimum formulir */
+    margin: 0 auto;
+    /* Margin (kiri dan kanan otomatis) */
+    text-align: center;
+    /* Pusatkan teks dalam formulir */
+}
+
+.contact form .input-box {
+    position: relative;
+    /* Posisi relatif */
+    display: flex;
+    /* Tampilkan sebagai flexbox */
+    justify-content: space-between;
+    /* Ruang di antara elemen flex */
+    flex-wrap: wrap;
+    /* Wrap elemen flex jika melebihi lebar kontainer */
+}
+
+/* Gaya untuk bidang input dalam kotak input */
+.contact form .input-box .input-field {
+    position: relative;
+    /* Posisi relatif */
+    width: 49%;
+    /* Lebar bidang input */
+    margin: .8rem 0;
+    /* Margin (atas dan bawah) */
+}
+
+/* Gaya untuk elemen input dan textarea dalam kotak input */
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea {
+    width: 100%;
+    /* Lebar 100% */
+    height: 100%;
+    /* Tinggi 100% */
+    padding: 1.5rem;
+    /* Padding */
+    font-size: 1.6rem;
+    /* Ukuran font */
+    color: var(--text-color);
+    /* Warna teks */
+    background: transparent;
+    /* Latar belakang transparan */
+    border-radius: .6rem;
+    /* Border radius */
+    border: .2rem solid var(--main-color);
+    /* Border dengan warna utama */
+}
+
+/* Gaya untuk placeholder dalam bidang input dan textarea */
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder {
+    color: var(--text-color);
+    /* Warna teks placeholder */
+}
+
+/* Efek fokus pada bidang input dan textarea */
+.contact form .focus {
+    position: absolute;
+    /* Posisi absolut */
+    top: 0;
+    /* Posisi atas 0 */
+    left: 0;
+    /* Posisi kiri 0 */
+    width: 0;
+    /* Lebar awal 0 */
+    height: 100%;
+    /* Tinggi 100% */
+    background: var(--second-bg-color);
+    /* Latar belakang dengan warna kedua */
+    border-radius: .6rem;
+    /* Border radius */
+    z-index: -1;
+    /* Indeks z -1 untuk berada di bawah elemen lain */
+    transition: .5s;
+    /* Transisi 0.5 detik */
+}
+
+/* Efek fokus aktif pada bidang input dan textarea */
+.contact form .input-box .input-field input:focus~.focus,
+.contact form .input-box .input-field input:valid~.focus,
+.contact form .textarea-field textarea:focus~.focus,
+.contact form .textarea-field textarea:valid~.focus {
+    width: 100%;
+    /* Lebar 100% saat fokus aktif */
+}
+
+/* Gaya untuk textarea dalam kotak input */
+.contact form .textarea-field {
+    position: relative;
+    /* Posisi relatif */
+    margin: .8rem 0 2.7rem;
+    /* Margin (atas, bawah, bawah) */
+    display: flex;
+    /* Tampilkan sebagai flexbox */
+}
+
+/* Gaya untuk textarea yang tidak dapat diubah ukurannya */
+.contact form .textarea-field textarea {
+    resize: none;
+    /* Tidak ada perubahan ukuran textarea */
+}
+
+/* Gaya untuk tombol dalam kotak tombol kontak */
+.contact form .btn-box.btns .btn {
+    cursor: pointer;
+    /* Tampilan kursor ketika diarahkan ke tombol */
+}
+
+
+.footer {
+    background: #323946;
+    /* Latar belakang footer */
+    color: #fff;
+    /* Warna teks footer */
+    text-align: center;
+    /* Teks rata tengah */
+    display: flex;
+    /* Tampilan fleksibel */
+    justify-content: space-between;
+    /* Penyusunan ke sisi-sisi */
+    align-items: center;
+    /* Penyusunan vertikal ke tengah */
+    flex-wrap: wrap;
+    /* Bungkus elemen saat ukuran layar terlalu kecil */
+    padding: 2rem 9%;
+    /* Padding atas dan bawah 2rem, padding kiri dan kanan 9% */
+    background: var(--second-bg-color);
+    /* Latar belakang dengan warna kedua */
+}
+
+.footer-text,
+.footer-iconTop {
+    position: relative;
+    /* Posisi relatif */
+}
+
+.footer-content {
+    display: flex;
+    /* Tampilan fleksibel */
+    justify-content: space-between;
+    /* Penyusunan ke sisi-sisi */
+    align-items: center;
+    /* Penyusunan vertikal ke tengah */
+    flex-wrap: wrap;
+    /* Bungkus elemen saat ukuran layar terlalu kecil */
+}
+
+.footer-text p {
+    font-size: 14px;
+    /* Ukuran font teks */
+    margin: 0;
+    /* Hapus margin */
+}
+
+.footer-iconTop a {
+    position: relative;
+    /* Posisi relatif */
+    display: inline-flex;
+    /* Tampilan fleksibel */
+    justify-content: center;
+    /* Penyusunan tengah horizontal */
+    align-items: center;
+    /* Penyusunan tengah vertikal */
+    padding: .8rem;
+    /* Padding */
+    background: var(--main-color);
+    /* Latar belakang dengan warna utama */
+    border: .2rem solid var(--main-color);
+    /* Border dengan warna utama */
+    border-radius: .6rem;
+    /* Border radius */
+    z-index: 1;
+    /* Indeks z 1 (di atas elemen lain) */
+    overflow: hidden;
+    /* Hilangkan overflow */
+}
+
+.footer-iconTop a::before {
+    content: '';
+    /* Konten kosong */
+    position: absolute;
+    /* Posisi absolut */
+    top: 0;
+    /* Posisi atas 0 */
+    left: 0;
+    /* Posisi kiri 0 */
+    width: 0;
+    /* Lebar awal 0 */
+    height: 100%;
+    /* Tinggi 100% */
+    background: var(--second-bg-color);
+    /* Latar belakang dengan warna kedua */
+    z-index: -1;
+    /* Indeks z -1 (di bawah elemen lain) */
+    transition: .5s;
+    /* Transisi 0.5 detik */
+}
+
+.footer-iconTop a:hover::before {
+    width: 100%;
+    /* Lebar 100% saat dihover */
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    /* Ukuran font ikon */
+    color: var(--bg-color);
+    /* Warna ikon */
+    transition: .5s;
+    /* Transisi 0.5 detik */
+}
+
+.footer-iconTop a:hover i {
+    color: var(--main-color);
+    /* Warna ikon saat dihover */
+}
+
+
+.footer-content {
+    flex-grow: 1;
+    /* Membuat konten footer tumbuh dengan flexbox */
+}
+
+.footer-iconTop {
+    margin-left: auto;
+    /* Menggeser elemen ke kiri */
+}
+
+/* ANIMATION RELOAD AND SCROLL */
+.animate {
+    position: absolute;
+    /* Posisi absolut */
+    top: 0;
+    /* Posisi atas 0 */
+    right: 0;
+    /* Posisi kanan 0 */
+    width: 100%;
+    /* Lebar 100% */
+    height: 100%;
+    /* Tinggi 100% */
+    background: var(--bg-color);
+    /* Latar belakang dengan warna latar belakang */
+    z-index: 98;
+    /* Indeks z 98 (di atas elemen lain) */
+}
+
+.animate.home-img {
+    width: 50%;
+    /* Lebar gambar di halaman rumah 50% */
+}
+
+.logo .animate,
+.navbar .animate,
+#menu-icon .animate,
+.home.show-animate .animate {
+    animation: showRight 1s ease forwards;
+    /* Animasi showRight selama 1 detik */
+    animation-delay: calc(.3s * var(--i));
+    /* Penundaan animasi sesuai dengan variabel --i */
+}
+
+.animate.scroll {
+    transition: 1s ease;
+    /* Transisi selama 1 detik */
+    transition-delay: calc(.3s / var(--i));
+    /* Penundaan transisi sesuai dengan variabel --i */
+    animation: none;
+    /* Hapus animasi */
+}
+
+section:nth-child(odd) .animate.scroll,
+footer .animate.scroll {
+    background: var(--second-bg-color);
+    /* Latar belakang dengan warna kedua pada bagian ganjil */
+}
+
+.education .education-box .animate.scroll {
+    width: 105%;
+    /* Lebar 105% pada elemen pendidikan */
+}
+
+.about.show-animate .animate.scroll,
+.education.show-animate .animate.scroll,
+.skills.show-animate .animate.scroll,
+.contact.show-animate .animate.scroll,
+.footer.show-animate .animate.scroll {
+    transition-delay: calc(.3s * var(--i));
+    /* Penundaan transisi sesuai dengan variabel --i */
+    width: 0;
+    /* Lebar 0 saat elemen ditampilkan */
+}
+
+
+/* BREAKPOINTS */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+        /* Mengganti ukuran font saat lebar layar maksimum adalah 1200px */
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 4%;
+        /* Mengubah padding header saat lebar layar maksimum adalah 991px */
+    }
+
+    section {
+        padding: 10rem 4% 2rem;
+        /* Mengubah padding section saat lebar layar maksimum adalah 991px */
+    }
+
+    .home {
+        padding: 0 4%;
+        /* Mengubah padding home saat lebar layar maksimum adalah 991px */
+    }
+
+    .footer {
+        padding: 2rem 4%;
+        /* Mengubah padding footer saat lebar layar maksimum adalah 991px */
+    }
+}
+
+@media (max-width: 850px) {
+    .animate.home-img {
+        width: 55%;
+        /* Mengubah lebar gambar di halaman rumah saat lebar layar maksimum adalah 850px */
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        background: var(--bg-color);
+        /* Mengubah latar belakang header saat lebar layar maksimum adalah 768px */
+    }
+
+    #menu-icon {
+        display: block;
+        /* Menampilkan ikon menu saat lebar layar maksimum adalah 768px */
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        padding: 1rem 4%;
+        background: var(--bg-color);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        z-index: 1;
+        transition: .25s ease;
+        transition-delay: .25s;
+    }
+
+    .navbar.active {
+        left: 0;
+        transition-delay: 0s;
+    }
+
+    .navbar .active-nav {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        z-index: -1;
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+
+    .navbar.active .active-nav {
+        left: 0;
+        transition-delay: .25s;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        transform: translateX(-20rem);
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+
+    .navbar.active a {
+        transform: translateX(0);
+        transition-delay: .25s;
+    }
+
+    .home-imgHover {
+        pointer-events: none;
+        background: var(--bg-color);
+        opacity: .6;
+        /* Mengubah opacity saat lebar layar maksimum adalah 768px */
+    }
+}
+
+@media (max-width: 520px) {
+    html {
+        font-size: 50%;
+        /* Mengganti ukuran font saat lebar layar maksimum adalah 520px */
+    }
+
+    .home-content h1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-sci {
+        width: 160px;
+        /* Mengubah lebar elemen home-sci saat lebar layar maksimum adalah 520px */
+    }
+
+    .home-sci a {
+        width: 38px;
+        height: 38px;
+        /* Mengubah lebar dan tinggi elemen home-sci a saat lebar layar maksimum adalah 520px */
+    }
+}
+
+@media (max-width: 462px) {
+    .home-content h1 {
+        font-size: 5.2rem;
+        /* Mengubah ukuran font elemen home-content h1 saat lebar layar maksimum adalah 462px */
+    }
+
+    .education {
+        padding: 10rem 4% 5rem 5%;
+        /* Mengubah padding elemen education saat lebar layar maksimum adalah 462px */
+    }
+
+    .contack form .input-box .input-field {
+        width: 100%;
+        /* Mengubah lebar input field dalam kontak form saat lebar layar maksimum adalah 462px */
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+        /* Mengubah arah flex elemen footer saat lebar layar maksimum adalah 462px */
+    }
+
+    .footer p {
+        margin-top: 2rem;
+        text-align: center;
+        /* Mengubah tampilan paragraf dalam elemen footer saat lebar layar maksimum adalah 462px */
+    }
+}
+
+@media (max-width: 371px) {
+    .home {
+        justify-content: center;
+        /* Mengubah justifikasi konten dalam elemen home saat lebar layar maksimum adalah 371px */
+    }
+
+    .home-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+        /* Mengubah ukuran font elemen home-content h1 saat lebar layar maksimum adalah 371px */
+    }
+}
+
+/* KEYFRAMES ANIMATION */
+@keyframes homeBgText {
+
+    0%,
+    10%,
+    100% {
+        background-position: -33rem 0;
+    }
+
+    65%,
+    85% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes homeCursorText {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    65%,
+    78%,
+    85% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    75%,
+    81% {
+        opacity: 0;
+    }
+}
+
+@keyframes aboutSpinner {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
